@@ -17,6 +17,13 @@
         <Cards />
       </v-col>
     </v-row>
+    <v-col>
+      <v-row> </v-row>
+
+      <v-row> </v-row>
+
+      <v-row> </v-row>
+    </v-col>
   </v-container>
 </template>
 
