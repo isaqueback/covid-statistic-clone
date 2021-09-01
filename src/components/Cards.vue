@@ -32,7 +32,7 @@
 
     <v-row>
         <v-col>
-            <TotalDose/>
+            <TotalDoses/>
         </v-col>
     </v-row>
   </v-container>
@@ -44,10 +44,10 @@ import Cases from "./Cases";
 import Deaths from "./Deaths";
 import FirstDose from "./FirstDose";
 import SecondDose from "./SecondDose";
-import TotalDose from "./TotalDose";
+import TotalDoses from "./TotalDoses";
 
 export default {
-  components: { Country, Cases, Deaths, FirstDose, SecondDose, TotalDose },
+  components: { Country, Cases, Deaths, FirstDose, SecondDose, TotalDoses },
 };
 </script>
 

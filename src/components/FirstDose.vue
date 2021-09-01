@@ -15,10 +15,10 @@
       <v-row class="mb-1 d-flex flex-column">
         <v-col
           class="d-flex justify-center align-center font-weight-medium text-h2 py-0"
-          >134.521.410</v-col
+          >{{firstDose}}</v-col
         >
         <v-col
-          class="d-flex justify-center align-center font-weight-light text-h4"
+          class="d-flex justify-center align-center font-weight-light text-h4 text-center"
         >
           62,86% of total population
         </v-col>
@@ -28,7 +28,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+    data() {
+        return {
+            firstDose: '134.521.410'
+        }
+    }
+};
 </script>
 
 <style scoped>

@@ -1,19 +1,13 @@
 <template>
-  <v-card elevation="2" class="cyan darken-1 rounded-xl white--text">
+  <v-card elevation="2" class="cyan darken-2 rounded-xl white--text">
     <v-container>
       <v-row class="mt-1">
-        <v-col cols="7" class="text-h4 font-weight-light">SECOND DOSE</v-col>
+        <v-col cols="9" class="text-h4 font-weight-light">TOTAL DOSES</v-col>
         <v-col class="d-flex justify-end align-center">
           <v-img
             class="white--text"
             style="filter: invert(100%)"
-            src="../assets/img/injection.png"
-            max-width="50"
-          ></v-img>
-          <v-img
-            class="white--text"
-            style="filter: invert(100%)"
-            src="../assets/img/injection.png"
+            src="../assets/img/shield.png"
             max-width="50"
           ></v-img>
         </v-col>
