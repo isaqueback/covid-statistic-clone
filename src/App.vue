@@ -1,16 +1,16 @@
 <template>
   <v-app>
-    <v-main class="pa-8">
+    <v-main class="px-3 py-8">
       <v-container>
         <v-row>
-          <v-col class="d-block">
-            <Logo/>
+          <v-col>
+            <Logo />
           </v-col>
         </v-row>
 
-        <v-row>
-          <v-col class="d-block mt-14">
-            <Info/>
+        <v-row class="mt-0">
+          <v-col class="pt-0">
+            <Info />
           </v-col>
         </v-row>
       </v-container>

@@ -1,7 +1,7 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
+  <v-container class="px-0">
+    <v-row class="">
+      <v-col class="">
         <Country />
       </v-col>
     </v-row>
@@ -51,5 +51,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>

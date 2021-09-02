@@ -1,25 +1,39 @@
 <template>
-  <v-card elevation="2" class="teal accent-3 rounded-xl white--text">
+  <v-card elevation="2" class="teal accent-3 rounded-lg white--text">
     <v-container>
-      <v-row class="mt-1">
-        <v-col class="text-h4 font-weight-light">COUNTRY</v-col>
-        <v-col class="d-flex justify-end align-center">
+      <v-row>
+        <v-col class="text-h7 font-weight-light pb-0">COUNTRY</v-col>
+        <v-col class="d-flex justify-end align-center pb-0">
           <v-img
             class="white--text"
             style="filter: invert(100%)"
             src="../assets/img/country.png"
-            max-width="50"
+            max-width="20"
           ></v-img>
         </v-col>
       </v-row>
-      <v-row class="mb-1 d-flex flex-column">
+      <v-row class="d-flex flex-column">
         <v-col
-          class="d-flex justify-center align-center font-weight-medium text-h2 py-0"
+          class="
+            d-flex
+            justify-center
+            align-center
+            font-weight-medium
+            text-h5
+            py-0
+            pt-1
+          "
           >BRAZIL</v-col
         >
         <v-col
-            class="d-flex justify-center align-center font-weight-light text-h4"
-            :class="{'flex-column': this.$vuetify.breakpoint.xs}"
+          class="
+            d-flex
+            justify-center
+            align-center
+            font-weight-light
+            text-h7
+            pt-0
+          "
           >POPULATION:<span class="ml-2">200.000.000</span></v-col
         >
       </v-row>
@@ -28,8 +42,7 @@
 </template>
 
 <script>
-export default {
-};
+export default {};
 </script>
 
 <style scoped>
