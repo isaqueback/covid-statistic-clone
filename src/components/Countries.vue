@@ -1,8 +1,9 @@
 <template>
   <v-autocomplete
-    :items="items"
+    :items="this.$store.state.countries"
     class="rounded-lg text-h6 font-weight-medium"
     outlined
+    v-model="value"
   >
   </v-autocomplete>
 </template>
@@ -11,9 +12,14 @@
 export default {
   data() {
     return {
-      items: ["Brazil", "United States", "Spanish", "Portugal"],
+        value: this.$store.state.countries[0]
     };
   },
+  watch: {
+      value() {
+          this.$store.state.country = this.value
+      }
+  }
 };
 </script>
 
