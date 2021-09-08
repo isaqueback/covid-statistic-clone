@@ -97,20 +97,22 @@
             'text-h4': breakpoint == 'lg' || breakpoint == 'xl',
           }"
         >
-          <span v-if="number == 0">{{ this.$store.state.country }}</span>
+          <span v-if="number == 0">{{
+            this.$store.state.country.toUpperCase()
+          }}</span>
           <span v-else-if="number == 1">{{
-            this.$store.state.totalCases
+            this.$store.state.totalCases | thousandSeparator
           }}</span>
           <span v-else-if="number == 2">{{
-            this.$store.state.totalDeaths
+            this.$store.state.totalDeaths | thousandSeparator
           }}</span>
           <span v-else-if="number == 3">
-            {{ this.$store.state.firstDose }}</span
+            {{ this.$store.state.firstDose | thousandSeparator }}</span
           >
           <span v-else-if="number == 4">
-            {{ this.$store.state.secondDose }}</span
+            {{ this.$store.state.secondDose | thousandSeparator }}</span
           >
-          <span v-else>{{ this.$store.state.totalDoses }}</span>
+          <span v-else>{{ this.$store.state.totalDoses | thousandSeparator }}</span>
         </v-col>
         <v-col
           class="
@@ -123,7 +125,7 @@
           "
         >
           <span v-if="number == 0">
-            POPULATION: {{ this.$store.state.population }}
+            POPULATION: {{ this.$store.state.population | thousandSeparator }}
           </span>
           <span v-else-if="number == 1">
             <v-img
@@ -133,7 +135,7 @@
               max-width="12"
               max-height="auto"
             ></v-img>
-            {{ this.$store.state.todayCases }} today
+            {{ this.$store.state.todayCases | thousandSeparator }} today
           </span>
           <span v-else-if="number == 2">
             <v-img
@@ -143,13 +145,13 @@
               max-width="12"
               max-height="auto"
             ></v-img>
-            {{ this.$store.state.todayDeaths }} today
+            {{ this.$store.state.todayDeaths | thousandSeparator }} today
           </span>
           <span v-else-if="number == 3">
-            {{ this.$store.state.firstDosePercentage }}% of total population
+            {{ this.$store.state.firstDosePercentage | thousandSeparator }}% of total population
           </span>
           <span v-else-if="number == 4">
-            {{ this.$store.state.secondDosePercentage }}% of total population
+            {{ this.$store.state.secondDosePercentage | thousandSeparator }}% of total population
           </span>
           <span v-else>
             <v-img
@@ -159,7 +161,7 @@
               max-width="12"
               max-height="auto"
             ></v-img>
-            {{ this.$store.state.todayDoses }} today</span
+            {{ this.$store.state.todayDoses | thousandSeparator }} today</span
           >
         </v-col>
       </v-row>
@@ -181,12 +183,18 @@ export default {
       else return "25";
     },
   },
+  filters: {
+    thousandSeparator(value) {
+       return Number(value).toLocaleString()
+    },
+  }
 };
 </script>
 
 <style scoped>
 .card-lg {
   width: 240px;
+  height: 100%;
 }
 
 .card-xl {

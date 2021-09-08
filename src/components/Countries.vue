@@ -39,6 +39,12 @@ export default {
           "https://raw.githubusercontent.com/owid/covid-19-data/master/public/data/owid-covid-data.json"
         )
         .then((response) => {
+          // Update
+          this.$store.state.update =
+            response.data[this.acronym].data[
+              response.data[this.acronym].data.length - 1
+            ]["date"]
+
           // Total Cases
           this.$store.state.totalCases =
             response.data[this.acronym].data[

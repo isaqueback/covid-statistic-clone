@@ -8,6 +8,7 @@ const store = new Vuex.Store({
         titleKey: [
             'COUNTRY', 'TOTAL CASES', 'TOTAL DEATHS', 'FIRST DOSE', 'SECOND DOSE', 'TOTAL DOSES'
         ],
+        update: '',
         countriesName: [],
         countriesAcronym: [],
         country: '',
