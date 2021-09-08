@@ -1,5 +1,6 @@
 <template>
-  <v-container class="px-0">
+  <v-container class="px-0" :class="{'d-flex flex-row flex-wrap justify-space-between align-baseline' : breakpoint == 'lg' || breakpoint == 'xl'
+    }">
     <v-row v-for="n in 6" :key="n">
       <v-col>
         <Card :number="n-1"/>
@@ -10,28 +11,18 @@
 
 <script>
 import Card from "./Card";
-// import Country from "./Country";
-// import Cases from "./Cases";
-// import Deaths from "./Deaths";
-// import FirstDose from "./FirstDose";
-// import SecondDose from "./SecondDose";
-// import TotalDoses from "./TotalDoses";
 
 export default {
   data() {
     return {
-      titleValue: [],
     };
   },
-  components: {
-    Card,
-//     Country,
-//     Cases,
-//     Deaths,
-//     FirstDose,
-//     SecondDose,
-//     TotalDoses,
-  },
+  components: { Card },
+  computed: {
+    breakpoint() {
+      return this.$vuetify.breakpoint.name
+    }
+  }
 };
 </script>
 
