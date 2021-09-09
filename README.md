@@ -1,4 +1,5 @@
 # covid-statistic
+https://covid-stats-clone.herokuapp.com/
 
 ## Project setup
 ```
